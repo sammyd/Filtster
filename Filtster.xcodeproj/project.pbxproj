@@ -13,6 +13,11 @@
 		221F0EC71A7698FF00FD2C3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EC61A7698FF00FD2C3B /* Images.xcassets */; };
 		221F0ECA1A7698FF00FD2C3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EC81A7698FF00FD2C3B /* LaunchScreen.xib */; };
 		221F0ED61A76990000FD2C3B /* FiltsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F0ED51A76990000FD2C3B /* FiltsterTests.swift */; };
+		221F0EE61A76A12D00FD2C3B /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221F0EE51A76A12D00FD2C3B /* PhotosUI.framework */; };
+		221F0EE81A76A12D00FD2C3B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221F0EE71A76A12D00FD2C3B /* Photos.framework */; };
+		221F0EED1A76A12D00FD2C3B /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */; };
+		221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */; };
+		221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,28 @@
 			remoteGlobalIDString = 221F0EB91A7698FF00FD2C3B;
 			remoteInfo = Filtster;
 		};
+		221F0EF01A76A12D00FD2C3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221F0EB21A7698FF00FD2C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221F0EE21A76A12D00FD2C3B;
+			remoteInfo = FiltsterPhotosExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		221F0EF61A76A12D00FD2C3B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		221F0EBA1A7698FF00FD2C3B /* Filtster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filtster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +62,12 @@
 		221F0ECF1A76990000FD2C3B /* FiltsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiltsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221F0ED41A76990000FD2C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		221F0ED51A76990000FD2C3B /* FiltsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltsterTests.swift; sourceTree = "<group>"; };
+		221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FiltsterPhotosExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		221F0EE51A76A12D00FD2C3B /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		221F0EE71A76A12D00FD2C3B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		221F0EEB1A76A12D00FD2C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
+		221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		221F0EE01A76A12D00FD2C3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221F0EE61A76A12D00FD2C3B /* PhotosUI.framework in Frameworks */,
+				221F0EE81A76A12D00FD2C3B /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +102,8 @@
 			children = (
 				221F0EBC1A7698FF00FD2C3B /* Filtster */,
 				221F0ED21A76990000FD2C3B /* FiltsterTests */,
+				221F0EE91A76A12D00FD2C3B /* FiltsterPhotosExtension */,
+				221F0EE41A76A12D00FD2C3B /* Frameworks */,
 				221F0EBB1A7698FF00FD2C3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +113,7 @@
 			children = (
 				221F0EBA1A7698FF00FD2C3B /* Filtster.app */,
 				221F0ECF1A76990000FD2C3B /* FiltsterTests.xctest */,
+				221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +156,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		221F0EE41A76A12D00FD2C3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				221F0EE51A76A12D00FD2C3B /* PhotosUI.framework */,
+				221F0EE71A76A12D00FD2C3B /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		221F0EE91A76A12D00FD2C3B /* FiltsterPhotosExtension */ = {
+			isa = PBXGroup;
+			children = (
+				221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */,
+				221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */,
+				221F0EEA1A76A12D00FD2C3B /* Supporting Files */,
+			);
+			path = FiltsterPhotosExtension;
+			sourceTree = "<group>";
+		};
+		221F0EEA1A76A12D00FD2C3B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				221F0EEB1A76A12D00FD2C3B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +193,12 @@
 				221F0EB61A7698FF00FD2C3B /* Sources */,
 				221F0EB71A7698FF00FD2C3B /* Frameworks */,
 				221F0EB81A7698FF00FD2C3B /* Resources */,
+				221F0EF61A76A12D00FD2C3B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				221F0EF11A76A12D00FD2C3B /* PBXTargetDependency */,
 			);
 			name = Filtster;
 			productName = Filtster;
@@ -150,6 +223,23 @@
 			productReference = 221F0ECF1A76990000FD2C3B /* FiltsterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		221F0EE21A76A12D00FD2C3B /* FiltsterPhotosExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221F0EF31A76A12D00FD2C3B /* Build configuration list for PBXNativeTarget "FiltsterPhotosExtension" */;
+			buildPhases = (
+				221F0EDF1A76A12D00FD2C3B /* Sources */,
+				221F0EE01A76A12D00FD2C3B /* Frameworks */,
+				221F0EE11A76A12D00FD2C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FiltsterPhotosExtension;
+			productName = FiltsterPhotosExtension;
+			productReference = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +255,9 @@
 					221F0ECE1A76990000FD2C3B = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 221F0EB91A7698FF00FD2C3B;
+					};
+					221F0EE21A76A12D00FD2C3B = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -183,6 +276,7 @@
 			targets = (
 				221F0EB91A7698FF00FD2C3B /* Filtster */,
 				221F0ECE1A76990000FD2C3B /* FiltsterTests */,
+				221F0EE21A76A12D00FD2C3B /* FiltsterPhotosExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		221F0EE11A76A12D00FD2C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +327,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		221F0EDF1A76A12D00FD2C3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221F0EED1A76A12D00FD2C3B /* PhotoEditingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +342,11 @@
 			isa = PBXTargetDependency;
 			target = 221F0EB91A7698FF00FD2C3B /* Filtster */;
 			targetProxy = 221F0ED01A76990000FD2C3B /* PBXContainerItemProxy */;
+		};
+		221F0EF11A76A12D00FD2C3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221F0EE21A76A12D00FD2C3B /* FiltsterPhotosExtension */;
+			targetProxy = 221F0EF01A76A12D00FD2C3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -338,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Filtster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Filtster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +505,30 @@
 			};
 			name = Release;
 		};
+		221F0EF41A76A12D00FD2C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FiltsterPhotosExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		221F0EF51A76A12D00FD2C3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FiltsterPhotosExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +554,14 @@
 			buildConfigurations = (
 				221F0EDD1A76990000FD2C3B /* Debug */,
 				221F0EDE1A76990000FD2C3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		221F0EF31A76A12D00FD2C3B /* Build configuration list for PBXNativeTarget "FiltsterPhotosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221F0EF41A76A12D00FD2C3B /* Debug */,
+				221F0EF51A76A12D00FD2C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
