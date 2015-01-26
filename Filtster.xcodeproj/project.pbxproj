@@ -18,6 +18,11 @@
 		221F0EED1A76A12D00FD2C3B /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */; };
 		221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */; };
 		221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22D428B51A76EEB60032B249 /* FilsterPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 22D428B41A76EEB60032B249 /* FilsterPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D428BB1A76EEB60032B249 /* FilsterPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D428B01A76EEB60032B249 /* FilsterPack.framework */; };
+		22D428C41A76EEB60032B249 /* FilsterPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D428C31A76EEB60032B249 /* FilsterPackTests.swift */; };
+		22D428C71A76EEB60032B249 /* FilsterPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D428B01A76EEB60032B249 /* FilsterPack.framework */; };
+		22D428C81A76EEB60032B249 /* FilsterPack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22D428B01A76EEB60032B249 /* FilsterPack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,27 @@
 			remoteGlobalIDString = 221F0EE21A76A12D00FD2C3B;
 			remoteInfo = FiltsterPhotosExtension;
 		};
+		22D428BC1A76EEB60032B249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221F0EB21A7698FF00FD2C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D428AF1A76EEB60032B249;
+			remoteInfo = FilsterPack;
+		};
+		22D428BE1A76EEB60032B249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221F0EB21A7698FF00FD2C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 221F0EB91A7698FF00FD2C3B;
+			remoteInfo = Filtster;
+		};
+		22D428C51A76EEB60032B249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221F0EB21A7698FF00FD2C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D428AF1A76EEB60032B249;
+			remoteInfo = FilsterPack;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +73,17 @@
 				221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D428CE1A76EEB60032B249 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				22D428C81A76EEB60032B249 /* FilsterPack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,6 +105,12 @@
 		221F0EEB1A76A12D00FD2C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		22D428B01A76EEB60032B249 /* FilsterPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FilsterPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D428B31A76EEB60032B249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D428B41A76EEB60032B249 /* FilsterPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilsterPack.h; sourceTree = "<group>"; };
+		22D428BA1A76EEB60032B249 /* FilsterPackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilsterPackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D428C21A76EEB60032B249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D428C31A76EEB60032B249 /* FilsterPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilsterPackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D428C71A76EEB60032B249 /* FilsterPack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +138,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22D428AC1A76EEB60032B249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D428B71A76EEB60032B249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D428BB1A76EEB60032B249 /* FilsterPack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +162,8 @@
 				221F0EBC1A7698FF00FD2C3B /* Filtster */,
 				221F0ED21A76990000FD2C3B /* FiltsterTests */,
 				221F0EE91A76A12D00FD2C3B /* FiltsterPhotosExtension */,
+				22D428B11A76EEB60032B249 /* FilsterPack */,
+				22D428C01A76EEB60032B249 /* FilsterPackTests */,
 				221F0EE41A76A12D00FD2C3B /* Frameworks */,
 				221F0EBB1A7698FF00FD2C3B /* Products */,
 			);
@@ -114,6 +175,8 @@
 				221F0EBA1A7698FF00FD2C3B /* Filtster.app */,
 				221F0ECF1A76990000FD2C3B /* FiltsterTests.xctest */,
 				221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */,
+				22D428B01A76EEB60032B249 /* FilsterPack.framework */,
+				22D428BA1A76EEB60032B249 /* FilsterPackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +246,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		22D428B11A76EEB60032B249 /* FilsterPack */ = {
+			isa = PBXGroup;
+			children = (
+				22D428B41A76EEB60032B249 /* FilsterPack.h */,
+				22D428B21A76EEB60032B249 /* Supporting Files */,
+			);
+			path = FilsterPack;
+			sourceTree = "<group>";
+		};
+		22D428B21A76EEB60032B249 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22D428B31A76EEB60032B249 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22D428C01A76EEB60032B249 /* FilsterPackTests */ = {
+			isa = PBXGroup;
+			children = (
+				22D428C31A76EEB60032B249 /* FilsterPackTests.swift */,
+				22D428C11A76EEB60032B249 /* Supporting Files */,
+			);
+			path = FilsterPackTests;
+			sourceTree = "<group>";
+		};
+		22D428C11A76EEB60032B249 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22D428C21A76EEB60032B249 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22D428AD1A76EEB60032B249 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D428B51A76EEB60032B249 /* FilsterPack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		221F0EB91A7698FF00FD2C3B /* Filtster */ = {
@@ -194,11 +302,13 @@
 				221F0EB71A7698FF00FD2C3B /* Frameworks */,
 				221F0EB81A7698FF00FD2C3B /* Resources */,
 				221F0EF61A76A12D00FD2C3B /* Embed App Extensions */,
+				22D428CE1A76EEB60032B249 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				221F0EF11A76A12D00FD2C3B /* PBXTargetDependency */,
+				22D428C61A76EEB60032B249 /* PBXTargetDependency */,
 			);
 			name = Filtster;
 			productName = Filtster;
@@ -240,6 +350,43 @@
 			productReference = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		22D428AF1A76EEB60032B249 /* FilsterPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D428CD1A76EEB60032B249 /* Build configuration list for PBXNativeTarget "FilsterPack" */;
+			buildPhases = (
+				22D428AB1A76EEB60032B249 /* Sources */,
+				22D428AC1A76EEB60032B249 /* Frameworks */,
+				22D428AD1A76EEB60032B249 /* Headers */,
+				22D428AE1A76EEB60032B249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FilsterPack;
+			productName = FilsterPack;
+			productReference = 22D428B01A76EEB60032B249 /* FilsterPack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22D428B91A76EEB60032B249 /* FilsterPackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D428CF1A76EEB60032B249 /* Build configuration list for PBXNativeTarget "FilsterPackTests" */;
+			buildPhases = (
+				22D428B61A76EEB60032B249 /* Sources */,
+				22D428B71A76EEB60032B249 /* Frameworks */,
+				22D428B81A76EEB60032B249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22D428BD1A76EEB60032B249 /* PBXTargetDependency */,
+				22D428BF1A76EEB60032B249 /* PBXTargetDependency */,
+			);
+			name = FilsterPackTests;
+			productName = FilsterPackTests;
+			productReference = 22D428BA1A76EEB60032B249 /* FilsterPackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,6 +406,13 @@
 					221F0EE21A76A12D00FD2C3B = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					22D428AF1A76EEB60032B249 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					22D428B91A76EEB60032B249 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 221F0EB91A7698FF00FD2C3B;
+					};
 				};
 			};
 			buildConfigurationList = 221F0EB51A7698FF00FD2C3B /* Build configuration list for PBXProject "Filtster" */;
@@ -277,6 +431,8 @@
 				221F0EB91A7698FF00FD2C3B /* Filtster */,
 				221F0ECE1A76990000FD2C3B /* FiltsterTests */,
 				221F0EE21A76A12D00FD2C3B /* FiltsterPhotosExtension */,
+				22D428AF1A76EEB60032B249 /* FilsterPack */,
+				22D428B91A76EEB60032B249 /* FilsterPackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +460,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D428AE1A76EEB60032B249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D428B81A76EEB60032B249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +505,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22D428AB1A76EEB60032B249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D428B61A76EEB60032B249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D428C41A76EEB60032B249 /* FilsterPackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -347,6 +532,21 @@
 			isa = PBXTargetDependency;
 			target = 221F0EE21A76A12D00FD2C3B /* FiltsterPhotosExtension */;
 			targetProxy = 221F0EF01A76A12D00FD2C3B /* PBXContainerItemProxy */;
+		};
+		22D428BD1A76EEB60032B249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D428AF1A76EEB60032B249 /* FilsterPack */;
+			targetProxy = 22D428BC1A76EEB60032B249 /* PBXContainerItemProxy */;
+		};
+		22D428BF1A76EEB60032B249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 221F0EB91A7698FF00FD2C3B /* Filtster */;
+			targetProxy = 22D428BE1A76EEB60032B249 /* PBXContainerItemProxy */;
+		};
+		22D428C61A76EEB60032B249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D428AF1A76EEB60032B249 /* FilsterPack */;
+			targetProxy = 22D428C51A76EEB60032B249 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -529,6 +729,80 @@
 			};
 			name = Release;
 		};
+		22D428C91A76EEB60032B249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FilsterPack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		22D428CA1A76EEB60032B249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FilsterPack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22D428CB1A76EEB60032B249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FilsterPackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Filtster.app/Filtster";
+			};
+			name = Debug;
+		};
+		22D428CC1A76EEB60032B249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FilsterPackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Filtster.app/Filtster";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,6 +822,7 @@
 				221F0EDB1A76990000FD2C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		221F0EDC1A76990000FD2C3B /* Build configuration list for PBXNativeTarget "FiltsterTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +831,7 @@
 				221F0EDE1A76990000FD2C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		221F0EF31A76A12D00FD2C3B /* Build configuration list for PBXNativeTarget "FiltsterPhotosExtension" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +840,25 @@
 				221F0EF51A76A12D00FD2C3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D428CD1A76EEB60032B249 /* Build configuration list for PBXNativeTarget "FilsterPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D428C91A76EEB60032B249 /* Debug */,
+				22D428CA1A76EEB60032B249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D428CF1A76EEB60032B249 /* Build configuration list for PBXNativeTarget "FilsterPackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D428CB1A76EEB60032B249 /* Debug */,
+				22D428CC1A76EEB60032B249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
