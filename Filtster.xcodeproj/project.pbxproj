@@ -18,6 +18,7 @@
 		221F0EED1A76A12D00FD2C3B /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */; };
 		221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */; };
 		221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22C0D5FA1A76F8DB002B73D7 /* CoreImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */; };
 		22D428B51A76EEB60032B249 /* FilsterPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 22D428B41A76EEB60032B249 /* FilsterPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22D428BB1A76EEB60032B249 /* FilsterPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D428B01A76EEB60032B249 /* FilsterPack.framework */; };
 		22D428C41A76EEB60032B249 /* FilsterPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D428C31A76EEB60032B249 /* FilsterPackTests.swift */; };
@@ -105,6 +106,7 @@
 		221F0EEB1A76A12D00FD2C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageWrapper.swift; sourceTree = "<group>"; };
 		22D428B01A76EEB60032B249 /* FilsterPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FilsterPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D428B31A76EEB60032B249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D428B41A76EEB60032B249 /* FilsterPack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilsterPack.h; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				22D428B41A76EEB60032B249 /* FilsterPack.h */,
 				22D428B21A76EEB60032B249 /* Supporting Files */,
+				22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */,
 			);
 			path = FilsterPack;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C0D5FA1A76F8DB002B73D7 /* CoreImageWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -754,6 +759,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -763,6 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
