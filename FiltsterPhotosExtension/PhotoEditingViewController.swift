@@ -17,14 +17,22 @@
 import UIKit
 import Photos
 import PhotosUI
+import FilsterPack
 
-class PhotoEditingViewController: UIViewController, PHContentEditingController {
+class PhotoEditingViewController: UIViewController, PHContentEditingController, FilsterFilterDelegate {
+  
+  @IBOutlet weak var filterOutputView: CIImageRendererView!
+  @IBOutlet weak var vignetteRadiusSlider: UISlider!
+  @IBOutlet weak var vignetteIntensitySlider: UISlider!
+  @IBOutlet weak var sepiaIntensitySlider: UISlider!
   
   var input: PHContentEditingInput?
+  let filter = FilsterFilter()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    filter.delegate = self
   }
   
   override func didReceiveMemoryWarning() {
@@ -45,6 +53,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController {
     // If you returned YES from canHandleAdjustmentData:, contentEditingInput has the original image and adjustment data.
     // If you returned NO, the contentEditingInput has past edits "baked in".
     input = contentEditingInput
+    filter.inputImage = CIImage(image: input?.displaySizeImage)
   }
   
   func finishContentEditingWithCompletionHandler(completionHandler: ((PHContentEditingOutput!) -> Void)!) {
@@ -76,6 +85,26 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController {
   func cancelContentEditing() {
     // Clean up temporary files, etc.
     // May be called after finishContentEditingWithCompletionHandler: while you prepare output.
+  }
+  
+  // MARK:- UI Interaction Methods
+  @IBAction func handleSliderChanged(sender: UISlider) {
+    switch sender {
+    case vignetteRadiusSlider:
+      filter.vignetteRadius = Double(sender.value)
+    case vignetteIntensitySlider:
+      filter.vignetteIntensity = Double(sender.value)
+    case sepiaIntensitySlider:
+      filter.sepiaIntensity = Double(sender.value)
+    default:
+      println("Shouldn't get here")
+    }
+  }
+  
+  
+  // MARK:- FilsterFilterDelegate methods
+  func outputImageDidUpdate(outputImage: CIImage) {
+    filterOutputView.image = outputImage
   }
   
 }

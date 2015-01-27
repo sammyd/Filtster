@@ -24,6 +24,9 @@ public class FilsterFilter {
   // MARK:- Public properties
   public var delegate: FilsterFilterDelegate?
   
+  public init() {
+  }
+  
   public var inputImage: CIImage! {
     didSet {
       performFilter()
@@ -31,19 +34,19 @@ public class FilsterFilter {
   }
   
   // MARK:- Filter Parameters
-  public var vignetteIntensity: Double = 0.0 {
+  public var vignetteIntensity: Double = 1.0 {
     didSet {
       performFilter()
     }
   }
   
-  public var vignetteRadius: Double = 1.0 {
+  public var vignetteRadius: Double = 0.5 {
     didSet {
       performFilter()
     }
   }
   
-  public var sepiaIntensity: Double = 0.0 {
+  public var sepiaIntensity: Double = 1.0 {
     didSet {
       performFilter()
     }
