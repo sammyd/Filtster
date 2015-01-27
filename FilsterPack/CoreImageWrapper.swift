@@ -25,7 +25,7 @@ func >>> (filter1: Filter, filter2: Filter) -> Filter {
 }
 
 
-func vignette(radius: Float, intensity: Float) -> Filter {
+func vignette(radius: Double, intensity: Double) -> Filter {
   return { image in
     let parameters: Parameters = [
       kCIInputImageKey     : image,
@@ -39,7 +39,7 @@ func vignette(radius: Float, intensity: Float) -> Filter {
   }
 }
 
-func sepia(intensity: Float) -> Filter {
+func sepia(intensity: Double) -> Filter {
   return { image in
     let parameters: Parameters = [
       kCIInputImageKey     : image,
