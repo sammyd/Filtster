@@ -18,6 +18,7 @@
 		221F0EED1A76A12D00FD2C3B /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */; };
 		221F0EEF1A76A12D00FD2C3B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */; };
 		221F0EF21A76A12D00FD2C3B /* FiltsterPhotosExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 221F0EE31A76A12D00FD2C3B /* FiltsterPhotosExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2244CA141A778BBD00D9B0A2 /* CIImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244CA131A778BBD00D9B0A2 /* CIImageRenderer.swift */; };
 		22C0D5FA1A76F8DB002B73D7 /* CoreImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */; };
 		22D428B51A76EEB60032B249 /* FilsterPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 22D428B41A76EEB60032B249 /* FilsterPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22D428BB1A76EEB60032B249 /* FilsterPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D428B01A76EEB60032B249 /* FilsterPack.framework */; };
@@ -106,6 +107,7 @@
 		221F0EEB1A76A12D00FD2C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		221F0EEC1A76A12D00FD2C3B /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		221F0EEE1A76A12D00FD2C3B /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		2244CA131A778BBD00D9B0A2 /* CIImageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIImageRenderer.swift; sourceTree = "<group>"; };
 		22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageWrapper.swift; sourceTree = "<group>"; };
 		22D428B01A76EEB60032B249 /* FilsterPack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FilsterPack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D428B31A76EEB60032B249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				22D428B41A76EEB60032B249 /* FilsterPack.h */,
 				22D428B21A76EEB60032B249 /* Supporting Files */,
 				22C0D5F91A76F8DB002B73D7 /* CoreImageWrapper.swift */,
+				2244CA131A778BBD00D9B0A2 /* CIImageRenderer.swift */,
 			);
 			path = FilsterPack;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2244CA141A778BBD00D9B0A2 /* CIImageRenderer.swift in Sources */,
 				22C0D5FA1A76F8DB002B73D7 /* CoreImageWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
