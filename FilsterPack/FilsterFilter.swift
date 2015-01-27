@@ -21,6 +21,10 @@ public protocol FilsterFilterDelegate {
 }
 
 public class FilsterFilter {
+  // MARK:- Filter info
+  public let filterIdentifier: String = "com.shinobicontrols.filster"
+  public let filterVersion: String    = "1.0"
+  
   // MARK:- Public properties
   public var delegate: FilsterFilterDelegate?
   
@@ -59,5 +63,30 @@ public class FilsterFilter {
                    >>> sepia(sepiaIntensity)
       delegate?.outputImageDidUpdate(filter(inputImage))
     }
+  }
+}
+
+// MARK:- Filter Serialization
+extension FilsterFilter {
+  public func supportsFilterIdentifier(identifier: String, version: String) {
+    return identifier == filterIdentifier && version == filterVersion
+  }
+  
+  public func importFilterParameters(data: NSData?) {
+    if let data = data {
+      if let dataDict = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [String : AnyObject] {
+        vignetteIntensity = dataDict["vignetteIntensity"] as? Double ?? vignetteIntensity
+        vignetteRadius    = dataDict["vignetteRadius"]    as? Double ?? vignetteRadius
+        sepiaIntensity    = dataDict["sepiaIntensity"]    as? Double ?? sepiaIntensity
+      }
+    }
+  }
+  
+  public func encodeFilterParameters() -> NSData {
+    var dataDict = [String : AnyObject]()
+    dataDict["vignetteIntensity"] = vignetteIntensity
+    dataDict["vignetteRadius"]    = vignetteRadius
+    dataDict["sepiaIntensity"]    = sepiaIntensity
+    return NSKeyedArchiver.archivedDataWithRootObject(dataDict)
   }
 }

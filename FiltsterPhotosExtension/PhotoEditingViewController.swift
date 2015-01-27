@@ -29,6 +29,9 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
   var input: PHContentEditingInput?
   let filter = FilsterFilter()
   
+  let formatIdentifier = "com.shinobicontrols.filtster"
+  let formatVersion    = "1.0"
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -43,9 +46,8 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
   // MARK: - PHContentEditingController
   
   func canHandleAdjustmentData(adjustmentData: PHAdjustmentData?) -> Bool {
-    // Inspect the adjustmentData to determine whether your extension can work with past edits.
-    // (Typically, you use its formatIdentifier and formatVersion properties to do this.)
-    return false
+    return adjustmentData?.formatIdentifier == formatIdentifier &&
+           adjustmentData?.formatVersion    == formatVersion
   }
   
   func startContentEditingWithInput(contentEditingInput: PHContentEditingInput?, placeholderImage: UIImage) {
@@ -54,6 +56,10 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
     // If you returned NO, the contentEditingInput has past edits "baked in".
     input = contentEditingInput
     filter.inputImage = CIImage(image: input?.displaySizeImage)
+    if let adjustmentData = contentEditingInput?.adjustmentData {
+      
+    }
+    
   }
   
   func finishContentEditingWithCompletionHandler(completionHandler: ((PHContentEditingOutput!) -> Void)!) {
