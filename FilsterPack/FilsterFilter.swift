@@ -56,19 +56,22 @@ public class FilsterFilter {
     }
   }
   
+  // MARK:- Output images
+  public var outputImage: CIImage {
+    let filter = vignette(vignetteRadius, vignetteIntensity)
+             >>> sepia(sepiaIntensity)
+    return filter(inputImage)
+  }
+  
   // MARK:- Private methods
   private func performFilter() {
-    if let inputImage = inputImage {
-      let filter =     vignette(vignetteRadius, vignetteIntensity)
-                   >>> sepia(sepiaIntensity)
-      delegate?.outputImageDidUpdate(filter(inputImage))
-    }
+    delegate?.outputImageDidUpdate(outputImage)
   }
 }
 
 // MARK:- Filter Serialization
 extension FilsterFilter {
-  public func supportsFilterIdentifier(identifier: String, version: String) {
+  public func supportsFilterIdentifier(identifier: String, version: String) -> Bool {
     return identifier == filterIdentifier && version == filterVersion
   }
   

@@ -18,8 +18,10 @@ import UIKit
 import Photos
 import PhotosUI
 import FilsterPack
+import CoreImage
 
-class PhotoEditingViewController: UIViewController, PHContentEditingController, FilsterFilterDelegate {
+class PhotoEditingViewController: UIViewController, PHContentEditingController,
+                                  FilsterFilterDelegate {
   
   @IBOutlet weak var filterOutputView: CIImageRendererView!
   @IBOutlet weak var vignetteRadiusSlider: UISlider!
@@ -34,7 +36,6 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
     filter.delegate = self
   }
   
@@ -46,20 +47,24 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
   // MARK: - PHContentEditingController
   
   func canHandleAdjustmentData(adjustmentData: PHAdjustmentData?) -> Bool {
-    return adjustmentData?.formatIdentifier == formatIdentifier &&
-           adjustmentData?.formatVersion    == formatVersion
+    if let adjustmentData = adjustmentData {
+      return filter.supportsFilterIdentifier(adjustmentData.formatIdentifier,
+        version: adjustmentData.formatVersion)
+    }
+    return false
   }
   
-  func startContentEditingWithInput(contentEditingInput: PHContentEditingInput?, placeholderImage: UIImage) {
-    // Present content for editing, and keep the contentEditingInput for use when closing the edit session.
-    // If you returned YES from canHandleAdjustmentData:, contentEditingInput has the original image and adjustment data.
-    // If you returned NO, the contentEditingInput has past edits "baked in".
+  func startContentEditingWithInput(contentEditingInput: PHContentEditingInput?,
+                                    placeholderImage: UIImage) {
     input = contentEditingInput
     filter.inputImage = CIImage(image: input?.displaySizeImage)
     if let adjustmentData = contentEditingInput?.adjustmentData {
-      
+      filter.importFilterParameters(adjustmentData.data)
     }
     
+    vignetteIntensitySlider.value = Float(filter.vignetteIntensity)
+    vignetteRadiusSlider.value    = Float(filter.vignetteRadius)
+    sepiaIntensitySlider.value    = Float(filter.sepiaIntensity)
   }
   
   func finishContentEditingWithCompletionHandler(completionHandler: ((PHContentEditingOutput!) -> Void)!) {
@@ -71,20 +76,28 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController, 
       let output = PHContentEditingOutput(contentEditingInput: self.input)
       
       // Provide new adjustments and render output to given location.
-      // output.adjustmentData = <#new adjustment data#>
-      // let renderedJPEGData = <#output JPEG#>
-      // renderedJPEGData.writeToURL(output.renderedContentURL, atomically: true)
+      let adjustmentData = PHAdjustmentData(formatIdentifier: self.filter.filterIdentifier,
+        formatVersion: self.filter.filterVersion, data: self.filter.encodeFilterParameters())
+      output.adjustmentData = adjustmentData
+      
+      // Write the JPEG data
+      let fullSizeImage = CIImage(contentsOfURL: self.input?.fullSizeImageURL)
+      UIGraphicsBeginImageContext(fullSizeImage.extent().size);
+      self.filter.inputImage = fullSizeImage
+      UIImage(CIImage: self.filter.outputImage)?.drawInRect(fullSizeImage.extent())
+      
+      let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+      let jpegData = UIImageJPEGRepresentation(outputImage, 1.0)
+      UIGraphicsEndImageContext()
+      
+      jpegData.writeToURL(output.renderedContentURL, atomically: true)
       
       // Call completion handler to commit edit to Photos.
       completionHandler?(output)
-      
-      // Clean up temporary files, etc.
     }
   }
   
   var shouldShowCancelConfirmation: Bool {
-    // Determines whether a confirmation to discard changes should be shown to the user on cancel.
-    // (Typically, this should be "true" if there are any unsaved changes.)
     return false
   }
   
