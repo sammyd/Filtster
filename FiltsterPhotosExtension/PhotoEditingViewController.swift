@@ -29,6 +29,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController,
   @IBOutlet weak var sepiaIntensitySlider: UISlider!
   
   var input: PHContentEditingInput?
+  private var dirty = false
   let filter = FilsterFilter()
   
   let formatIdentifier = "com.shinobicontrols.filtster"
@@ -98,7 +99,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController,
   }
   
   var shouldShowCancelConfirmation: Bool {
-    return false
+    return dirty
   }
   
   func cancelContentEditing() {
@@ -118,6 +119,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController,
     default:
       println("Shouldn't get here")
     }
+    dirty = true
   }
   
   
