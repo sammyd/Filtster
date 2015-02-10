@@ -17,11 +17,11 @@
 import UIKit
 import Photos
 import PhotosUI
-import FilsterPack
+import FiltsterPack
 import CoreImage
 
 class PhotoEditingViewController: UIViewController, PHContentEditingController,
-                                  FilsterFilterDelegate {
+                                  FiltsterFilterDelegate {
   
   @IBOutlet weak var filterOutputView: CIImageRendererView!
   @IBOutlet weak var vignetteRadiusSlider: UISlider!
@@ -30,7 +30,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController,
   
   var input: PHContentEditingInput?
   private var dirty = false
-  let filter = FilsterFilter()
+  let filter = FiltsterFilter()
   
   let formatIdentifier = "com.shinobicontrols.filtster"
   let formatVersion    = "1.0"
@@ -123,7 +123,7 @@ class PhotoEditingViewController: UIViewController, PHContentEditingController,
   }
   
   
-  // MARK:- FilsterFilterDelegate methods
+  // MARK:- FiltsterFilterDelegate methods
   func outputImageDidUpdate(outputImage: CIImage) {
     filterOutputView.image = outputImage
   }

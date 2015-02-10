@@ -17,11 +17,11 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for FilsterPack.
-FOUNDATION_EXPORT double FilsterPackVersionNumber;
+FOUNDATION_EXPORT double FiltsterPackVersionNumber;
 
 //! Project version string for FilsterPack.
-FOUNDATION_EXPORT const unsigned char FilsterPackVersionString[];
+FOUNDATION_EXPORT const unsigned char FiltsterPackVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <FilsterPack/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <FiltsterPack/PublicHeader.h>
 
 

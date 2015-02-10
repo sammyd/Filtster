@@ -16,17 +16,17 @@
 
 import Foundation
 
-public protocol FilsterFilterDelegate {
+public protocol FiltsterFilterDelegate {
   func outputImageDidUpdate(outputImage: CIImage)
 }
 
-public class FilsterFilter {
+public class FiltsterFilter {
   // MARK:- Filter info
   public let filterIdentifier: String = "com.shinobicontrols.filster"
   public let filterVersion: String    = "1.0"
   
   // MARK:- Public properties
-  public var delegate: FilsterFilterDelegate?
+  public var delegate: FiltsterFilterDelegate?
   
   public init() {
   }
@@ -70,7 +70,7 @@ public class FilsterFilter {
 }
 
 // MARK:- Filter Serialization
-extension FilsterFilter {
+extension FiltsterFilter {
   public func supportsFilterIdentifier(identifier: String, version: String) -> Bool {
     return identifier == filterIdentifier && version == filterVersion
   }
